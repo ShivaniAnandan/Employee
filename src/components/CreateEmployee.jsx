@@ -23,7 +23,7 @@ const CreateEmployee = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:4000/api/create-emp', formData);
+      await axios.post('https://example-deployment-x0aw.onrender.com/api/create-emp', formData);
       // Navigate back to the card page
       navigate('/');
     } catch (error) {

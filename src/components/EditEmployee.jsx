@@ -19,7 +19,7 @@ const EditEmployee = () => {
 
   const fetchEmployeeData = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/get-empdetails/${email}`);
+      const response = await axios.get(`https://example-deployment-x0aw.onrender.com/api/get-empdetails/${email}`);
       if (response.data && response.data.data) {
         const employee = response.data.data;
         setEmployeeData({
@@ -44,7 +44,7 @@ const EditEmployee = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:4000/api/edit-emp/${email}`, employeeData);
+      await axios.put(`https://example-deployment-x0aw.onrender.com/api/edit-emp/${email}`, employeeData);
       alert('Employee details updated successfully');
       navigate('/'); // Navigate back to the card page after successful update
     } catch (error) {

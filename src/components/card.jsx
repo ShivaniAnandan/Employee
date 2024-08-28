@@ -14,7 +14,7 @@ const CardComponent = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/get-empdetails');
+      const response = await axios.get('https://example-deployment-x0aw.onrender.com/api/get-empdetails');
       // Add profile image URL for each employee
       const employees = response.data.data.map(employee => ({
         ...employee,
@@ -30,7 +30,7 @@ const CardComponent = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:4000/api/employee/${id}`);
+      const response = await axios.delete(`https://example-deployment-x0aw.onrender.com/api/employee/${id}`);
       if (response.status === 200) {
         setMessage(response.data.message);
         setData(data.filter((item) => item._id !== id));
